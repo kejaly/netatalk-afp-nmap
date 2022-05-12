@@ -1,6 +1,12 @@
 # netatalk-afp-nmap
 对 nmap 中 afp 协议的一些完善（具体在 afp.lua ），以及新添一些脚本。
 
+另外，由于 nmap 对非 548 端口的 afp 协议识别不了，所以如果需要对非 548 端口的 afp 服务运行脚本，需要自行修改脚本中的 `portrule`，比如：
+
+```lua
+portrule = shortport.portnumber({548, 32884})
+```
+
 
 
 ## 脚本使用
